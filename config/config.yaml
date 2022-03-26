@@ -1,0 +1,7 @@
+data_path: ./data/ml-1m/ratings.dat
+params:
+  batch_size: 32
+  num_hidden_units: 500
+  learning_rate: 0.001
+  reg_l2: 0
+  epochs: 100
