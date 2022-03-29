@@ -19,7 +19,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 cudnn.benchmark = True
 
 
-def load_data():
+def load_data() -> pd.DataFrame:
     return pd.read_csv(
         cfg["data_path"],
         sep="::",

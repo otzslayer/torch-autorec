@@ -31,7 +31,7 @@ class AutoRecData(data.Dataset):
 
 def preprocess_data(
     data: pd.DataFrame, test_size: float = 0.1, random_state: int = 0
-) -> Tuple[List[List[int]], List[List[int]], int, int]:
+) -> Tuple[np.ndarray, np.ndarray, int, int]:
     r"""Helper function to preprocess data.
 
     Parameters
@@ -48,8 +48,7 @@ def preprocess_data(
 
     Returns
     -------
-    Tuple[List[List[int]], List[List[int]], int, int]
-        _description_
+    Tuple[np.ndarray, np.ndarray, int, int]
     """
     num_users = np.max(data["user"])
     num_items = np.max(data["item"])
